@@ -1,0 +1,183 @@
+#about__me {
+	width: 100vw - 20vw;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	.text {
+		margin-top: 4em;
+		h1 {
+			font-family: $font;
+			font-weight: $regular;
+			font-size: $responsive__font;
+			--max-font: 80;
+			--min-font: 60;
+			text-transform: lowercase;
+			width: 80vw;
+			margin: auto;
+
+			span {
+				font-weight: $bold;
+			}
+
+			.half-bg {
+				background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+				background-origin: 0;
+				background-size: 200% 40%;
+				background-repeat: repeat-x;
+				background-position: -100% 100%;
+				transition: background-position 0.5s;
+			}
+		}
+
+		.inner {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			max-width: 70%;
+			justify-content: flex-start;
+			margin-top: 3em;
+			font-family: $font;
+
+			h2 {
+				font-size: $responsive__font;
+				--max-font: 40;
+				--min-font: 40;
+				white-space: nowrap;
+			}
+
+			h3 {
+				margin-top: 1em;
+				font-size: $responsive__font;
+				--max-font: 20;
+				--min-font: 20;
+				white-space: nowrap;
+				opacity: .5;
+				text-transform: uppercase;
+				font-weight: $bold;
+			}
+
+			p {
+				font-size: $responsive__font;
+				--max-font: 20;
+				--min-font: 20;
+				opacity: .5;
+			}
+
+			.socials {
+				margin-top: 1em;
+				font-size: 1.2em;
+				white-space: nowrap;
+				cursor: pointer;
+
+				span {
+					// opacity: .5;
+					transition: opacity .2s ease-in;
+
+					&:hover {
+						opacity: 1;
+						transition: opacity .2s ease-in;
+					}
+				}
+
+				i {
+					margin-left: 1em;
+
+					&:first-of-type {
+						margin-left: 0;
+					}
+
+					&:hover + span {
+						background-position: -100% 100%;
+						transition: background-position 0.5s;
+					}
+				}
+
+				.fa-linkedin {
+					color: $linkedin;
+				}
+
+				.linkedin-half-bg {
+					background-image: linear-gradient(to right, transparent 50%, $linkedin 50%);
+					background-origin: 0;
+					background-size: 200% 40%;
+					background-repeat: repeat-x;
+					background-position: 0 100%;
+					transition: background-position 0.5s;
+					// margin-right: 1em;
+
+					&:hover {
+						background-position: -100% 100%;
+						transition: background-position 0.5s;
+					}
+				}
+
+				.fa-codepen {
+					color: $codepen;
+				}
+
+				.codepen-half-bg {
+					background-image: linear-gradient(to right, transparent 50%, $codepen 50%);
+					background-origin: 0;
+					background-size: 200% 40%;
+					background-repeat: repeat-x;
+					background-position: 0 100%;
+					transition: background-position 0.5s;
+					// margin-right: 1em;
+
+					&:hover {
+						background-position: -100% 100%;
+						transition: background-position 0.5s;
+					}
+				}
+
+				.fa-instagram {
+					color: $instagram;
+				}
+
+				.instagram-half-bg {
+					background-image: linear-gradient(to right, transparent 50%, $instagram 50%);
+					background-origin: 0;
+					background-size: 200% 40%;
+					background-repeat: repeat-x;
+					background-position: 0 100%;
+					transition: background-position 0.5s;
+					// margin-right: 1em;
+
+					&:hover {
+						background-position: -100% 100%;
+						transition: background-position 0.5s;
+					}
+				}
+
+				.fa-youtube {
+					color: $youtube;
+				}
+
+				.youtube-half-bg {
+					background-image: linear-gradient(to right, transparent 50%, $youtube 50%);
+					background-origin: 0;
+					background-size: 200% 40%;
+					background-repeat: repeat-x;
+					background-position: 0 100%;
+					transition: background-position 0.5s;
+					// margin-right: 1em;
+
+					&:hover {
+						background-position: -100% 100%;
+						transition: background-position 0.5s;
+					}
+				}
+			}
+		}
+	}
+	.picture {
+		clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+		margin-top: -1.7em;
+	}
+	.picture img {
+		object-fit: scale-down;
+		object-position: center;
+		width: 100%;
+	}
+}
