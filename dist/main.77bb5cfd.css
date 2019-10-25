@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap");
 @font-face {
   font-family: "Brown";
   src: url("/Brown-Regular.7324907d.eot");
@@ -65,6 +66,158 @@ a {
   top: 0px;
   z-index: 100;
   margin-top: 4.8em;
+}
+
+footer {
+  width: 100vw;
+  min-height: 50vh;
+  background: #ece9e6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(#ece9e6, #ffffff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ece9e6, #ffffff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 5em;
+  box-shadow: 0 1rem 2.8rem 0 rgba(0, 0, 0, 0.15);
+  font-family: "Brown";
+  padding: 2em;
+  padding-bottom: 0;
+}
+footer a {
+  color: whitesmoke;
+}
+@media (max-width: 425px) {
+  footer {
+    padding: 1em;
+  }
+}
+@media (max-width: 375px) {
+  footer {
+    padding: 0.5em;
+  }
+}
+footer span {
+  display: block;
+  width: max-content;
+}
+footer h1 {
+  font-family: "Brown";
+  font-weight: normal;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 70;
+  --min-font: 30;
+  text-transform: lowercase;
+  margin: auto;
+}
+footer h1 span {
+  display: inline;
+  font-weight: bold;
+}
+footer h1 .half-bg {
+  background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+  background-origin: 0;
+  background-size: 200% 40%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%;
+  transition: background-position 0.5s;
+}
+footer .contact {
+  margin: 1em 0em;
+  font-size: 20px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+  background-origin: 0;
+  background-size: 200% 40%;
+  background-repeat: repeat-x;
+  background-position: 0% 100%;
+  transition: background-position 0.5s;
+}
+footer .contact i {
+  margin-right: 0.4em;
+}
+footer .contact:hover {
+  opacity: 0.8;
+  background-position: -100% 100%;
+  transition: background-position 0.5s;
+}
+footer .contact a {
+  color: black;
+}
+footer .btn-linkedin {
+  background: #0277b5;
+  color: whitesmoke;
+  padding: 1em 2em;
+  margin: 1em 0em;
+  font-size: 16px;
+  margin: auto;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+@media (max-width: 375px) {
+  footer .btn-linkedin {
+    margin-left: 0;
+  }
+}
+footer .btn-linkedin i {
+  margin-right: 0.4em;
+}
+footer .btn-linkedin:hover {
+  opacity: 0.8;
+}
+footer .btn-github {
+  background: #181818;
+  color: whitesmoke;
+  padding: 1em 2em;
+  margin: 1em 0em;
+  font-size: 16px;
+  margin: auto;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+@media (max-width: 375px) {
+  footer .btn-github {
+    margin-left: 0;
+  }
+}
+footer .btn-github i {
+  margin-right: 0.4em;
+}
+footer .btn-github:hover {
+  opacity: 0.8;
+}
+footer .by-line {
+  width: max-content;
+  max-width: 80%;
+  margin: auto;
+  font-size: 20px;
+  white-space: normal;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 16;
+  --min-font: 16;
+}
+footer .by-line span {
+  display: inline;
+  font-weight: bold;
+}
+footer .by-line .half-bg {
+  background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+  background-origin: 0;
+  background-size: 200% 40%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%;
+  transition: background-position 0.5s;
+}
+@media (max-width: 375px) {
+  footer .by-line {
+    margin-left: 0;
+  }
+}
+footer .btns {
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: auto;
 }
 
 nav {
@@ -259,7 +412,7 @@ ul.menu li {
   margin-bottom: 2em;
   font-family: "Brown";
   font-weight: bold;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 50;
   --min-font: 30;
 }
@@ -319,7 +472,7 @@ ul.menu li span.active {
 #introduction .content h1 {
   font-family: "Brown";
   font-weight: normal;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 95;
   --min-font: 45;
 }
@@ -478,7 +631,7 @@ ul.menu li span.active {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  margin-top: 5em;
+  margin-top: 1em;
 }
 @media (max-width: 375px) {
   .fa-chevron-down {
@@ -500,7 +653,7 @@ ul.menu li span.active {
 #my__work h1 {
   font-family: "Brown";
   font-weight: normal;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 80;
   --min-font: 60;
   text-transform: lowercase;
@@ -539,7 +692,7 @@ ul.menu li span.active {
   position: relative;
 }
 #my__work .portfolio .project .number {
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 120;
   --min-font: 70;
 }
@@ -547,6 +700,16 @@ ul.menu li span.active {
   margin-top: 5em;
   display: grid;
   grid-template-columns: 50% 50%;
+}
+#my__work .portfolio .project:nth-child(odd) .tec {
+  display: block;
+  width: max-content;
+  margin: 1em 1.4em;
+}
+@media (max-width: 768px) {
+  #my__work .portfolio .project:nth-child(odd) .tec {
+    margin-left: 0;
+  }
 }
 @media (max-width: 768px) {
   #my__work .portfolio .project:nth-child(odd) {
@@ -644,9 +807,12 @@ ul.menu li span.active {
   }
 }
 #my__work .portfolio .project:nth-child(odd) .picture img {
-  height: 100%;
+  width: 100%;
   object-fit: fill;
   transition: 0.4s ease-in-out;
+}
+#my__work .portfolio .project:nth-child(odd):nth-child(3) .picture img {
+  object-position: bottom;
 }
 #my__work .portfolio .project:nth-child(odd) .text {
   height: auto;
@@ -665,7 +831,7 @@ ul.menu li span.active {
   margin-left: -1.5em;
   display: inline;
   z-index: 2;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 80;
   --min-font: 40;
 }
@@ -676,8 +842,8 @@ ul.menu li span.active {
 }
 #my__work .portfolio .project:nth-child(odd) .text p {
   max-width: 400px;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
-  --max-font: 25;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 20;
   --min-font: 16;
   margin: 0.5em 1em;
   margin-bottom: 1.5em;
@@ -732,6 +898,18 @@ ul.menu li span.active {
   justify-items: flex-end;
   grid-template-columns: 50% 50%;
   margin-left: auto;
+}
+#my__work .portfolio .project:nth-child(even) .tec {
+  display: block;
+  width: max-content;
+  margin: 1em 2.8em;
+  margin-left: auto;
+  margin-bottom: 1.5em;
+}
+@media (max-width: 768px) {
+  #my__work .portfolio .project:nth-child(even) .tec {
+    margin-left: 0;
+  }
 }
 @media (max-width: 768px) {
   #my__work .portfolio .project:nth-child(even) {
@@ -857,7 +1035,7 @@ ul.menu li span.active {
   z-index: 2;
   margin-right: -1em;
   display: inline;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 80;
   --min-font: 40;
 }
@@ -872,8 +1050,8 @@ ul.menu li span.active {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   max-width: 400px;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
-  --max-font: 25;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 20;
   --min-font: 16;
   margin: 0.5em 2em;
   margin-left: auto;
@@ -927,21 +1105,43 @@ ul.menu li span.active {
 #about__me {
   width: 80vw;
   margin: auto;
+  max-height: 90vh;
   display: grid;
   grid-template-columns: 50% 50%;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  #about__me {
+    overflow: visible;
+    max-height: none;
+    display: block;
+  }
 }
 #about__me .text {
   margin-top: 4em;
 }
+@media (max-width: 768px) {
+  #about__me .text {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 425px) {
+  #about__me .text {
+    width: 100%;
+    margin: auto;
+  }
+}
 #about__me .text h1 {
   font-family: "Brown";
   font-weight: normal;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 80;
   --min-font: 60;
   text-transform: lowercase;
   width: 80vw;
   margin: auto;
+  white-space: nowrap;
 }
 #about__me .text h1 span {
   font-weight: bold;
@@ -963,15 +1163,26 @@ ul.menu li span.active {
   margin-top: 3em;
   font-family: "Brown";
 }
+@media (max-width: 425px) {
+  #about__me .text .inner {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
 #about__me .text .inner h2 {
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 40;
   --min-font: 40;
   white-space: nowrap;
 }
+@media (max-width: 375px) {
+  #about__me .text .inner h2 {
+    white-space: normal;
+  }
+}
 #about__me .text .inner h3 {
   margin-top: 1em;
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 20;
   --min-font: 20;
   white-space: nowrap;
@@ -980,10 +1191,15 @@ ul.menu li span.active {
   font-weight: bold;
 }
 #about__me .text .inner p {
-  font-size: calc( 	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 20;
   --min-font: 20;
   opacity: 0.5;
+}
+@media (max-width: 425px) {
+  #about__me .text .inner p {
+    width: 100%;
+  }
 }
 #about__me .text .inner .socials {
   margin-top: 1em;
@@ -991,12 +1207,25 @@ ul.menu li span.active {
   white-space: nowrap;
   cursor: pointer;
 }
+@media (max-width: 425px) {
+  #about__me .text .inner .socials {
+    white-space: normal;
+  }
+}
 #about__me .text .inner .socials span {
   transition: opacity 0.2s ease-in;
+  margin-right: 0.5em;
 }
 #about__me .text .inner .socials span:hover {
   opacity: 1;
   transition: opacity 0.2s ease-in;
+}
+@media (max-width: 425px) {
+  #about__me .text .inner .socials span {
+    display: block;
+    width: max-content;
+    margin-bottom: 1em;
+  }
 }
 #about__me .text .inner .socials i {
   margin-left: 1em;
@@ -1004,7 +1233,7 @@ ul.menu li span.active {
 #about__me .text .inner .socials i:first-of-type {
   margin-left: 0;
 }
-#about__me .text .inner .socials i:hover + span {
+#about__me .text .inner .socials i:hover {
   background-position: -100% 100%;
   transition: background-position 0.5s;
 }
@@ -1014,7 +1243,7 @@ ul.menu li span.active {
 #about__me .text .inner .socials .linkedin-half-bg {
   background-image: linear-gradient(to right, transparent 50%, #0277b5 50%);
   background-origin: 0;
-  background-size: 200% 40%;
+  background-size: 200% 25%;
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s;
@@ -1029,7 +1258,7 @@ ul.menu li span.active {
 #about__me .text .inner .socials .codepen-half-bg {
   background-image: linear-gradient(to right, transparent 50%, #8c90a0 50%);
   background-origin: 0;
-  background-size: 200% 40%;
+  background-size: 200% 25%;
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s;
@@ -1044,7 +1273,7 @@ ul.menu li span.active {
 #about__me .text .inner .socials .instagram-half-bg {
   background-image: linear-gradient(to right, transparent 50%, #e1306c 50%);
   background-origin: 0;
-  background-size: 200% 40%;
+  background-size: 200% 25%;
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s;
@@ -1059,7 +1288,7 @@ ul.menu li span.active {
 #about__me .text .inner .socials .youtube-half-bg {
   background-image: linear-gradient(to right, transparent 50%, #ff0000 50%);
   background-origin: 0;
-  background-size: 200% 40%;
+  background-size: 200% 25%;
   background-repeat: repeat-x;
   background-position: 0 100%;
   transition: background-position 0.5s;
@@ -1070,12 +1299,111 @@ ul.menu li span.active {
 }
 #about__me .picture {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  margin-top: -1.7em;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  #about__me .picture {
+    clip-path: none;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
 }
 #about__me .picture img {
   object-fit: scale-down;
   object-position: center;
   width: 100%;
+}
+
+section#counter-stats {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  min-height: 30vh;
+  display: grid;
+  align-items: center;
+  background: url(https://images.unsplash.com/photo-1515595967223-f9fa59af5a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
+  background-attachment: fixed;
+  background-size: cover;
+}
+section#counter-stats .row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+section#counter-stats .row .stats {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Brown";
+}
+section#counter-stats .row .stats > * {
+  margin-bottom: 0.4em;
+}
+section#counter-stats .row .stats h5 {
+  font-weight: normal;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 20;
+  --min-font: 16;
+}
+section#counter-stats .row .stats .fa {
+  color: #000;
+  font-size: 60px;
+}
+section#counter-stats .row .stats .counting {
+  font-weight: bold;
+}
+@media (max-width: 425px) {
+  section#counter-stats {
+    display: none;
+  }
+}
+
+#get__in__touch {
+  padding-top: 6em;
+  width: 95vw;
+  margin: auto;
+  margin-bottom: 5em;
+}
+#get__in__touch h1 {
+  font-family: "Brown";
+  font-weight: normal;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 80;
+  --min-font: 60;
+  text-transform: lowercase;
+  width: 80vw;
+  margin: auto;
+}
+#get__in__touch h1 span {
+  font-weight: bold;
+}
+#get__in__touch h1 .half-bg {
+  background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+  background-origin: 0;
+  background-size: 200% 40%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%;
+  transition: background-position 0.5s;
+}
+#get__in__touch h5 {
+  font-family: "Brown";
+  font-weight: normal;
+  font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
+  --max-font: 50;
+  --min-font: 50;
+  text-transform: lowercase;
+  width: 80vw;
+  margin: auto;
+}
+#get__in__touch h5 span {
+  font-weight: bold;
+}
+#get__in__touch h5 .half-bg {
+  background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+  background-origin: 0;
+  background-size: 200% 40%;
+  background-repeat: repeat-x;
+  background-position: -100% 100%;
+  transition: background-position 0.5s;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

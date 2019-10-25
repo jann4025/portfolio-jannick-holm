@@ -1,10 +1,29 @@
 #about__me {
 	width: 100vw - 20vw;
 	margin: auto;
+	max-height: 90vh;
 	display: grid;
 	grid-template-columns: 50% 50%;
+	overflow: hidden;
+
+	@include tb {
+		overflow: visible;
+		max-height: none;
+		display: block;
+	}
+
 	.text {
 		margin-top: 4em;
+
+		@include tb {
+			width: 90%;
+			margin: auto;
+		}
+
+		@include ml {
+			width: 100%;
+			margin: auto;
+		}
 		h1 {
 			font-family: $font;
 			font-weight: $regular;
@@ -14,6 +33,7 @@
 			text-transform: lowercase;
 			width: 80vw;
 			margin: auto;
+			white-space: nowrap;
 
 			span {
 				font-weight: $bold;
@@ -38,11 +58,19 @@
 			margin-top: 3em;
 			font-family: $font;
 
+			@include ml {
+				max-width: 100%;
+				margin-right: 0;
+			}
+
 			h2 {
 				font-size: $responsive__font;
 				--max-font: 40;
 				--min-font: 40;
 				white-space: nowrap;
+				@include mm {
+					white-space: normal;
+				}
 			}
 
 			h3 {
@@ -61,6 +89,10 @@
 				--max-font: 20;
 				--min-font: 20;
 				opacity: .5;
+
+				@include ml {
+					width: 100%;
+				}
 			}
 
 			.socials {
@@ -69,13 +101,23 @@
 				white-space: nowrap;
 				cursor: pointer;
 
+				@include ml {
+					white-space: normal;
+				}
+
 				span {
 					// opacity: .5;
 					transition: opacity .2s ease-in;
-
+					margin-right: .5em;
 					&:hover {
 						opacity: 1;
 						transition: opacity .2s ease-in;
+					}
+
+					@include ml {
+						display: block;
+						width: max-content;
+						margin-bottom: 1em;
 					}
 				}
 
@@ -86,7 +128,7 @@
 						margin-left: 0;
 					}
 
-					&:hover + span {
+					&:hover {
 						background-position: -100% 100%;
 						transition: background-position 0.5s;
 					}
@@ -99,7 +141,7 @@
 				.linkedin-half-bg {
 					background-image: linear-gradient(to right, transparent 50%, $linkedin 50%);
 					background-origin: 0;
-					background-size: 200% 40%;
+					background-size: 200% 25%;
 					background-repeat: repeat-x;
 					background-position: 0 100%;
 					transition: background-position 0.5s;
@@ -118,7 +160,7 @@
 				.codepen-half-bg {
 					background-image: linear-gradient(to right, transparent 50%, $codepen 50%);
 					background-origin: 0;
-					background-size: 200% 40%;
+					background-size: 200% 25%;
 					background-repeat: repeat-x;
 					background-position: 0 100%;
 					transition: background-position 0.5s;
@@ -137,7 +179,7 @@
 				.instagram-half-bg {
 					background-image: linear-gradient(to right, transparent 50%, $instagram 50%);
 					background-origin: 0;
-					background-size: 200% 40%;
+					background-size: 200% 25%;
 					background-repeat: repeat-x;
 					background-position: 0 100%;
 					transition: background-position 0.5s;
@@ -156,7 +198,7 @@
 				.youtube-half-bg {
 					background-image: linear-gradient(to right, transparent 50%, $youtube 50%);
 					background-origin: 0;
-					background-size: 200% 40%;
+					background-size: 200% 25%;
 					background-repeat: repeat-x;
 					background-position: 0 100%;
 					transition: background-position 0.5s;
@@ -172,8 +214,16 @@
 	}
 	.picture {
 		clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+		// width: 500px;
+		height: 100%;
+		// margin-top: -1.7em;
 
-		margin-top: -1.7em;
+		@include tb {
+			clip-path: none;
+			width: 100%;
+			max-width: 400px;
+			margin: auto;
+		}
 	}
 	.picture img {
 		object-fit: scale-down;

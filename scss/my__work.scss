@@ -62,6 +62,15 @@
 			display: grid;
 			grid-template-columns: 50% 50%;
 
+			.tec {
+				display: block;
+				width: max-content;
+				margin: 1em 1.4em;
+				@include tb {
+					margin-left: 0;
+				}
+			}
+
 			//768 px
 			@include tb {
 				display: block;
@@ -149,10 +158,14 @@
 				}
 
 				img {
-					height: 100%;
+					width: 100%;
 					object-fit: fill;
 					transition: 0.4s ease-in-out;
 				}
+			}
+
+			&:nth-child(3) .picture img {
+				object-position: bottom;
 			}
 
 			.text {
@@ -185,7 +198,7 @@
 				p {
 					max-width: 400px;
 					font-size: $responsive__font;
-					--max-font: 25;
+					--max-font: 20;
 					--min-font: 16;
 					margin: .5em 1em;
 					margin-bottom: 1.5em;
@@ -235,6 +248,19 @@
 			justify-items: flex-end;
 			grid-template-columns: 50% 50%;
 			margin-left: auto;
+
+			.tec {
+				display: block;
+				width: max-content;
+				margin: 1em 2.8em;
+				margin-left: auto;
+				margin-bottom: 1.5em;
+
+				@include tb {
+					margin-left: 0;
+				}
+			}
+
 			//768 px
 			@include tb {
 				display: flex;
@@ -295,9 +321,9 @@
 
 				@include tb {
 					left: -.4em;
-                }
-                
-                @include mm {
+				}
+
+				@include mm {
 					left: 0em;
 				}
 			}
@@ -371,7 +397,7 @@
 					margin-inline-end: 0px;
 					max-width: 400px;
 					font-size: $responsive__font;
-					--max-font: 25;
+					--max-font: 20;
 					--min-font: 16;
 					margin: .5em 2em;
 					margin-left: auto;

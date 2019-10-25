@@ -16,9 +16,11 @@
 	font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+
 $font: 'Brown';
 $regular: normal;
 $bold: bold;
 $responsive__font: calc(
-	(var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420))
+	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420))
 );

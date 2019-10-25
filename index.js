@@ -32,19 +32,13 @@ function menuOpen() {
 }
 
 function readScroll() {
-	var scrollPosY = window.pageYOffset;
-	console.log(scrollPosY >= 0);
+	let scrollPosY = window.pageYOffset;
+	console.log(scrollPosY);
 
 	scrollPosY >= 0 || scrollPosY < 701 ? linkChangeHome() : '';
 	scrollPosY >= 701 ? portfolioLinkChange() : '';
 	scrollPosY >= 3296 ? aboutLinkChane() : '';
-
-	// if (scrollPosY > 0) {
-	// 	document.querySelector('.home-link').classList.add('active');
-	// } else if (scrollPosY >= 701) {
-	// 	document.querySelector('.active').classList.remove('active');
-	// 	document.querySelector('.portfolio-link').classList.add('active');
-	// }
+	scrollPosY >= 2682 ? countStats() : '';
 }
 
 function linkChangeHome() {
@@ -60,4 +54,29 @@ function portfolioLinkChange() {
 function aboutLinkChane() {
 	document.querySelector('.active').classList.remove('active');
 	document.querySelector('.about-link').classList.add('active');
+}
+
+function countStats() {
+	// number count for stats, using jQuery animate
+	$('.counting').each(function() {
+		var $this = $(this),
+			countTo = $this.attr('data-count');
+
+		$({ countNum: $this.text() }).animate(
+			{
+				countNum: countTo
+			},
+			{
+				duration: 2000,
+				easing: 'linear',
+				step: function() {
+					$this.text(Math.floor(this.countNum));
+				},
+				complete: function() {
+					$this.text(this.countNum);
+					//alert('finished');
+				}
+			}
+		);
+	});
 }
