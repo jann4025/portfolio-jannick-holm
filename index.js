@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', start);
 
 document.addEventListener('scroll', readScroll);
 
+
 function start() {
 	var rellax = new Rellax('.rellax');
 	console.log('Connection between the DOM and the Script was successfull! Nice 😎');
@@ -25,7 +26,6 @@ function start() {
 		{ passive: true }
 	);
 
-	countStats();
 }
 
 function menuOpen() {
@@ -39,7 +39,8 @@ function readScroll() {
 
 	scrollPosY >= 0 || scrollPosY < 701 ? linkChangeHome() : '';
 	scrollPosY >= 701 ? portfolioLinkChange() : '';
-	scrollPosY >= 3296 ? aboutLinkChane() : '';
+	scrollPosY >= 3296 ? aboutLinkChange() : '';
+	scrollPosY >= 2416 ? countStats() : '';
 	
 }
 
@@ -53,10 +54,11 @@ function portfolioLinkChange() {
 	document.querySelector('.portfolio-link').classList.add('active');
 }
 
-function aboutLinkChane() {
+function aboutLinkChange() {
 	document.querySelector('.active').classList.remove('active');
 	document.querySelector('.about-link').classList.add('active');
 }
+
 
 function countStats() {
 	// number count for stats, using jQuery animate
@@ -82,3 +84,4 @@ function countStats() {
 		);
 	});
 }
+

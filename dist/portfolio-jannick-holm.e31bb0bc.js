@@ -541,7 +541,6 @@ function start() {
   }, {
     passive: true
   });
-  countStats();
 }
 
 function menuOpen() {
@@ -571,28 +570,6 @@ function aboutLinkChane() {
   document.querySelector('.active').classList.remove('active');
   document.querySelector('.about-link').classList.add('active');
 }
-
-function countStats() {
-  // number count for stats, using jQuery animate
-  $('.counting').each(function () {
-    var $this = $(this),
-        countTo = $this.attr('data-count');
-    $({
-      countNum: $this.text()
-    }).animate({
-      countNum: countTo
-    }, {
-      duration: 2000,
-      easing: 'linear',
-      step: function step() {
-        $this.text(Math.floor(this.countNum));
-      },
-      complete: function complete() {
-        $this.text(this.countNum); //alert('finished');
-      }
-    });
-  });
-}
 },{"rellax":"node_modules/rellax/rellax.js"}],"../../../../.npm-global/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -621,7 +598,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58936" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64510" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

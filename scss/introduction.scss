@@ -191,9 +191,8 @@
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	margin-top: 1em;
-	@include mm {
-		margin-top: 2em;
-	}
+	@include ml {
+display:none;	}
 }
 
 @keyframes scrollAnimation {
