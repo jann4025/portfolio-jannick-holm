@@ -20,7 +20,7 @@ html {
 	font-size: 16px;
 	background: white;
 	overflow-x: hidden;
-	max-width: 1440px;
+	// max-width: 1440px;
 	margin: auto;
 }
 
@@ -82,7 +82,7 @@ footer {
 		color: whitesmoke;
 	}
 	@include ml {
-		padding: 1em;
+		padding: .5em;
 	}
 
 	@include mm {
@@ -223,5 +223,17 @@ footer {
 		flex-wrap: wrap;
 		margin: auto;
 		margin-top: auto;
+		
+		@include ml {
+			width: 70%;
+			margin: auto;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2em;
+		}
+
+		@include mm {
+			margin: 0;
+		}
 	}
 }

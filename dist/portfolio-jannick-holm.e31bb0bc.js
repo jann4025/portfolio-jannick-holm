@@ -541,6 +541,7 @@ function start() {
   }, {
     passive: true
   });
+  countStats();
 }
 
 function menuOpen() {
@@ -554,7 +555,6 @@ function readScroll() {
   scrollPosY >= 0 || scrollPosY < 701 ? linkChangeHome() : '';
   scrollPosY >= 701 ? portfolioLinkChange() : '';
   scrollPosY >= 3296 ? aboutLinkChane() : '';
-  scrollPosY >= 2682 ? countStats() : '';
 }
 
 function linkChangeHome() {
@@ -621,7 +621,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61274" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58936" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

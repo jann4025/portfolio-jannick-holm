@@ -172,6 +172,7 @@
 				height: auto;
 				margin-top: auto;
 				margin-bottom: auto;
+				line-height: 1.2;
 
 				//768px
 				@include tb {
@@ -367,6 +368,7 @@
 				height: auto;
 				margin-top: auto;
 				margin-bottom: auto;
+				line-height: 1.2;
 
 				//768px
 				@include tb {
@@ -439,6 +441,59 @@
 						padding: .5em 1em;
 					}
 				}
+			}
+		}
+	}
+
+	.see__more {
+		margin-top: 4em;
+		
+		h1 {
+			margin-bottom: .5em;
+		}
+
+		.btn-github {
+			font-family: $font;
+			background: $github;
+			color: whitesmoke;
+   
+			padding: 1em 2em;
+			font-size: 16px;
+			margin: auto;
+			cursor: pointer;
+			margin-left: 6.8em;
+
+			@include lg {
+				margin-left: 4.9em;
+			}
+
+			@include tb {
+				margin-left: 3.6em;
+			}
+			@include ml {
+				margin-left: 2em;
+			}
+
+			@include mm {
+				margin-left: 1.7em;
+			}
+
+			@include ms {
+				margin-left: 1.5em;
+			}
+
+			a {
+			color:	whitesmoke;
+			}
+	
+			
+	
+			i {
+				margin-right: .4em;
+			}
+	
+			&:hover {
+				opacity: .8;
 			}
 		}
 	}

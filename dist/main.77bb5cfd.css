@@ -35,7 +35,6 @@ html {
   font-size: 16px;
   background: white;
   overflow-x: hidden;
-  max-width: 1440px;
   margin: auto;
 }
 
@@ -88,7 +87,7 @@ footer a {
 }
 @media (max-width: 425px) {
   footer {
-    padding: 1em;
+    padding: 0.5em;
   }
 }
 @media (max-width: 375px) {
@@ -218,6 +217,20 @@ footer .btns {
   flex-wrap: wrap;
   margin: auto;
   margin-top: auto;
+}
+@media (max-width: 425px) {
+  footer .btns {
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+  }
+}
+@media (max-width: 375px) {
+  footer .btns {
+    margin: 0;
+  }
 }
 
 nav {
@@ -818,6 +831,7 @@ ul.menu li span.active {
   height: auto;
   margin-top: auto;
   margin-bottom: auto;
+  line-height: 1.2;
 }
 @media (max-width: 768px) {
   #my__work .portfolio .project:nth-child(odd) .text {
@@ -1021,6 +1035,7 @@ ul.menu li span.active {
   height: auto;
   margin-top: auto;
   margin-bottom: auto;
+  line-height: 1.2;
 }
 @media (max-width: 768px) {
   #my__work .portfolio .project:nth-child(even) .text {
@@ -1101,24 +1116,79 @@ ul.menu li span.active {
     padding: 0.5em 1em;
   }
 }
+#my__work .see__more {
+  margin-top: 4em;
+}
+#my__work .see__more h1 {
+  margin-bottom: 0.5em;
+}
+#my__work .see__more .btn-github {
+  font-family: "Brown";
+  background: #181818;
+  color: whitesmoke;
+  padding: 1em 2em;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  margin-left: 6.8em;
+}
+@media (max-width: 1024px) {
+  #my__work .see__more .btn-github {
+    margin-left: 4.9em;
+  }
+}
+@media (max-width: 768px) {
+  #my__work .see__more .btn-github {
+    margin-left: 3.6em;
+  }
+}
+@media (max-width: 425px) {
+  #my__work .see__more .btn-github {
+    margin-left: 2em;
+  }
+}
+@media (max-width: 375px) {
+  #my__work .see__more .btn-github {
+    margin-left: 1.7em;
+  }
+}
+@media (max-width: 320px) {
+  #my__work .see__more .btn-github {
+    margin-left: 1.5em;
+  }
+}
+#my__work .see__more .btn-github a {
+  color: whitesmoke;
+}
+#my__work .see__more .btn-github i {
+  margin-right: 0.4em;
+}
+#my__work .see__more .btn-github:hover {
+  opacity: 0.8;
+}
 
 #about__me {
   width: 80vw;
   margin: auto;
-  max-height: 90vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
-  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  #about__me {
+    width: 90vw;
+  }
 }
 @media (max-width: 768px) {
   #about__me {
     overflow: visible;
     max-height: none;
     display: block;
+    width: 95vw;
   }
 }
 #about__me .text {
-  margin-top: 4em;
+  height: max-content;
 }
 @media (max-width: 768px) {
   #about__me .text {
@@ -1139,9 +1209,20 @@ ul.menu li span.active {
   --max-font: 80;
   --min-font: 60;
   text-transform: lowercase;
-  width: 80vw;
-  margin: auto;
   white-space: nowrap;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 425px) {
+  #about__me .text h1 {
+    margin-bottom: 0.5em;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  #about__me .text h1 {
+    margin-bottom: 0.5em;
+    margin-left: 0;
+  }
 }
 #about__me .text h1 span {
   font-weight: bold;
@@ -1158,9 +1239,7 @@ ul.menu li span.active {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 70%;
-  justify-content: flex-start;
-  margin-top: 3em;
+  justify-content: center;
   font-family: "Brown";
 }
 @media (max-width: 425px) {
@@ -1186,26 +1265,49 @@ ul.menu li span.active {
   --max-font: 20;
   --min-font: 20;
   white-space: nowrap;
-  opacity: 0.5;
+  opacity: 1;
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 0.3em;
 }
 #about__me .text .inner p {
   font-size: calc( 	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420)) );
   --max-font: 20;
   --min-font: 20;
-  opacity: 0.5;
+  opacity: 1;
+  line-height: 1.3;
+}
+@media (max-width: 768px) {
+  #about__me .text .inner p {
+    width: 100%;
+  }
 }
 @media (max-width: 425px) {
   #about__me .text .inner p {
     width: 100%;
   }
 }
+#about__me .text .inner ul {
+  margin-top: 0.5em;
+  font-weight: bold;
+  line-height: 1.3;
+}
 #about__me .text .inner .socials {
   margin-top: 1em;
   font-size: 1.2em;
   white-space: nowrap;
   cursor: pointer;
+}
+@media (max-width: 1024px) {
+  #about__me .text .inner .socials {
+    white-space: normal;
+  }
+}
+@media (max-width: 768px) {
+  #about__me .text .inner .socials {
+    width: 110%;
+    margin-bottom: 2em;
+  }
 }
 @media (max-width: 425px) {
   #about__me .text .inner .socials {
@@ -1219,6 +1321,19 @@ ul.menu li span.active {
 #about__me .text .inner .socials span:hover {
   opacity: 1;
   transition: opacity 0.2s ease-in;
+}
+@media (max-width: 1024px) {
+  #about__me .text .inner .socials span {
+    display: block;
+    width: max-content;
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 768px) {
+  #about__me .text .inner .socials span {
+    display: inline;
+    margin-bottom: 1em;
+  }
 }
 @media (max-width: 425px) {
   #about__me .text .inner .socials span {
@@ -1298,21 +1413,28 @@ ul.menu li span.active {
   transition: background-position 0.5s;
 }
 #about__me .picture {
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  height: 100%;
+  width: 600px;
+  display: grid;
+  justify-items: center;
 }
 @media (max-width: 768px) {
   #about__me .picture {
-    clip-path: none;
     width: 100%;
     max-width: 400px;
+    margin-left: 2em;
+  }
+}
+@media (max-width: 425px) {
+  #about__me .picture {
+    width: 100%;
+    max-width: 300px;
     margin: auto;
   }
 }
 #about__me .picture img {
-  object-fit: scale-down;
   object-position: center;
   width: 100%;
+  max-width: 410px;
 }
 
 section#counter-stats {
